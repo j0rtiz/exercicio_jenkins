@@ -1,0 +1,80 @@
+<html>
+
+<head>
+  <title>Calculadora</title>
+  <style>
+    .width-85 {
+      width: 85px;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Calculadora</h2>
+
+  <table>
+    <tr>
+      <td>Valor A:</td>
+      <td>
+        <input type="text" id="a">
+      </td>
+    </tr>
+    <tr>
+      <td>Valor B:</td>
+      <td>
+        <input type="text" id="b">
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <button class="width-85" onclick="somar()" id="botao_somar">Somar</button>
+        <button class="width-85" onclick="multiplicar()" id="botao_multiplicar">Multiplicar</button>
+      </td>
+    </tr>
+  </table>
+
+  <br>
+  <br>
+
+  <div id="resultado"></div>
+
+  <script>
+    function somar() {
+      var valorA = document.getElementById("a").value;
+      var valorB = document.getElementById("b").value;
+      if (valorA == "" || valorB == "") {
+        alert("preencha todos os campos");
+        return;
+      }
+
+      if (isNaN(valorA) || isNaN(valorB)) {
+        alert("digite somente números");
+        return;
+      }
+
+      var resultado = parseInt(valorA) + parseInt(valorB);
+      document.getElementById("resultado").innerHTML = "Resultado da soma:  " + resultado;
+    }
+
+    function multiplicar() {
+      var valorA = document.getElementById("a").value;
+      var valorB = document.getElementById("b").value;
+      if (valorA == "" || valorB == "") {
+        alert("preencha todos os campos");
+        return;
+      }
+
+      if (isNaN(valorA) || isNaN(valorB)) {
+        alert("digite somente números");
+        return;
+      }
+
+      var resultado = parseInt(valorA) * parseInt(valorB);
+      document.getElementById("resultado").innerHTML = "Resultado da mutiplicacao: " + resultado;
+    }
+  </script>
+</body>
+
+
+</html>
