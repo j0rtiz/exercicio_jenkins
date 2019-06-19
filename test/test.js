@@ -7,9 +7,11 @@ const page = `${__dirname}\\..\\src\\index.html`;
   await driver.getTitle()
     .then(titulo => {
       if (titulo === 'Calculadora') {
-        console.log('TITULO: OK!');
+        // console.log('TITULO: OK!');
+        return 0;
       } else {
-        console.log('TITULO: ERRADO!');
+        // console.log('TITULO: ERRADO!');
+        return 1;
       }
     })
     .catch(err => {
@@ -23,9 +25,11 @@ const page = `${__dirname}\\..\\src\\index.html`;
   await driver.findElement(By.id('resultado')).getText()
     .then(resultado => {
       if (resultado === 'Resultado da soma: 13') {
-        console.log('SOMA: OK!');
+        // console.log('SOMA: OK!');
+        return 0;
       } else {
-        console.log('SOMA: ERRADA!');
+        // console.log('SOMA: ERRADA!');
+        return 1;
       }
     })
     .catch(err => {
@@ -39,9 +43,11 @@ const page = `${__dirname}\\..\\src\\index.html`;
   await driver.findElement(By.id('resultado')).getText()
     .then(resultado => {
       if (resultado === 'Resultado da mutiplicacao: 27') {
-        console.log('MULTIPLACACAO: OK!');
+        // console.log('MULTIPLACACAO: OK!');
+        return 0;
       } else {
-        console.log('MULTIPLACACAO: ERRADA!');
+        // console.log('MULTIPLACACAO: ERRADA!');
+        return 1;
       }
     })
     .catch(err => {
@@ -53,9 +59,11 @@ const page = `${__dirname}\\..\\src\\index.html`;
   await driver.switchTo().alert().getText()
     .then(alert => {
       if (alert === 'preencha todos os campos') {
-        console.log('ALERTA DE CAMPO VAZIO: OK!');
+        // console.log('ALERTA DE CAMPO VAZIO: OK!');
+        return 0;
       } else {
-        console.log('ALERTA DE CAMPO VAZIO: ERRADO!');
+        // console.log('ALERTA DE CAMPO VAZIO: ERRADO!');
+        return 1;
       }
     })
     .then(() => driver.switchTo().alert().dismiss())
@@ -68,9 +76,11 @@ const page = `${__dirname}\\..\\src\\index.html`;
   await driver.switchTo().alert().getText()
     .then(alert => {
       if (alert === 'digite somente números') {
-        console.log('ALERTA DE TIPO DE DADO ERRADO: OK!');
+        // console.log('ALERTA DE TIPO DE DADO ERRADO: OK!');
+        return 0;
       } else {
-        console.log('ALERTA DE TIPO DE DADO ERRADO: ERRADO!');
+        // console.log('ALERTA DE TIPO DE DADO ERRADO: ERRADO!');
+        return 1;
       }
     })
     .then(() => driver.switchTo().alert().dismiss())
