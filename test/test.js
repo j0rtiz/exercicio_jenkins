@@ -7,9 +7,9 @@ const page = `${__dirname}\\..\\src\\index.html`;
   await driver.getTitle()
     .then(titulo => {
       if (titulo === 'Calculadora') {
-        console.log('TÍTULO: OK!');
+        console.log('TITULO: OK!');
       } else {
-        console.log('TÍTULO: ERRADO!');
+        console.log('TITULO: ERRADO!');
       }
     })
     .catch(err => {
@@ -39,9 +39,9 @@ const page = `${__dirname}\\..\\src\\index.html`;
   await driver.findElement(By.id('resultado')).getText()
     .then(resultado => {
       if (resultado === 'Resultado da mutiplicacao: 27') {
-        console.log('MULTIPLACAÇÃO: OK!');
+        console.log('MULTIPLACACAO: OK!');
       } else {
-        console.log('MULTIPLACAÇÃO: ERRADA!');
+        console.log('MULTIPLACACAO: ERRADA!');
       }
     })
     .catch(err => {
