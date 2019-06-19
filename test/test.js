@@ -14,6 +14,9 @@ const page = `${__dirname}\\..\\src\\index.html`;
     })
     .catch(err => {
       console.log('Erro: ' + err);
+    })
+    .finally(() => {
+      return 0;
     });
   const a = await driver.findElement(By.id('a'));
   const b = await driver.findElement(By.id('b'));
@@ -30,6 +33,9 @@ const page = `${__dirname}\\..\\src\\index.html`;
     })
     .catch(err => {
       console.log('Erro: ' + err);
+    })
+    .finally(() => {
+      return 0;
     });
   await a.clear();
   await b.clear();
@@ -46,6 +52,9 @@ const page = `${__dirname}\\..\\src\\index.html`;
     })
     .catch(err => {
       console.log('Erro: ' + err);
+    })
+    .finally(() => {
+      return 0;
     });
   await a.clear();
   await b.clear();
@@ -61,6 +70,9 @@ const page = `${__dirname}\\..\\src\\index.html`;
     .then(() => driver.switchTo().alert().dismiss())
     .catch(err => {
       console.log('Erro: ' + err);
+    })
+    .finally(() => {
+      return 0;
     });
   await a.sendKeys(4);
   await b.sendKeys('quatro');
@@ -76,6 +88,9 @@ const page = `${__dirname}\\..\\src\\index.html`;
     .then(() => driver.switchTo().alert().dismiss())
     .catch(err => {
       console.log('Erro: ' + err);
+    })
+    .finally(() => {
+      return 0;
     });
   await driver.quit();
 })();
