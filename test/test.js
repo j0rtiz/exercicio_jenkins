@@ -6,7 +6,7 @@ const page = `${__dirname}\\..\\src\\index.html`;
   await driver.get(page);
   await driver.getTitle()
     .then(titulo => {
-      if (titulo === 'Calculadora') {
+      if (titulo === 'Calculadora7') {
         // console.log('TITULO: OK!');
         return 0;
       } else {
